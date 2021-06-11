@@ -21,12 +21,30 @@ fun main() {
     }
 
     var me = Person("Ella","S")
+    me.stateHobby()
 }
 
 class Person (firstName: String = "DefaultFirstName", lastName: String = "DefaultLastName") {
+    // Member variables - properties
+    var age : Int? = null
+    var hobby: String = "watch Netflix"
+
+    // initializer block
     init {
-        // this function runs once an instance of Person is initialized
         println("$firstName is nice")
+    }
+
+    // Member secondary constructor
+    constructor(firstName: String, lastName: String, age: Int):
+            // this means that the firstName and lastName come from our prime constructor
+            this(firstName,lastName) {
+        this.age = age
+
+    }
+
+    // Member functions - Methods
+    fun stateHobby() {
+        println("My hobby is $hobby")
     }
 
 
