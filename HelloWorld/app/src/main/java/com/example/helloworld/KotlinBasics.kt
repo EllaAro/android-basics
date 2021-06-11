@@ -19,4 +19,15 @@ fun main() {
         is String -> println("String")
         is Double -> println("Double")
     }
+
+    var me = Person("Ella","S")
+}
+
+class Person (firstName: String = "DefaultFirstName", lastName: String = "DefaultLastName") {
+    init {
+        // this function runs once an instance of Person is initialized
+        println("$firstName is nice")
+    }
+
+
 }
