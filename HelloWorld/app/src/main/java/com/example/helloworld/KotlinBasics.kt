@@ -2,7 +2,7 @@ package com.example.helloworld
 
 fun main() {
     var myName = "Ella" //we create a variable. val can't be mutable , but var can be
-    println("Hello ${myName}")
+    println("Hello $myName")
 
     val month = 3
     when (month) {
