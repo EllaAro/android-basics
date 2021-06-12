@@ -1,6 +1,7 @@
 package com.example.helloworld
 
 fun main() {
+    /*
     var myName = "Ella" //we create a variable. val can't be mutable , but var can be
     println("Hello $myName")
 
@@ -22,6 +23,15 @@ fun main() {
 
     var me = Person("Ella","S")
     me.stateHobby()
+
+    var myCar = Car()
+    println(myCar.owner)
+    println(myCar.myBrand)
+     */
+
+    val user1 = User(1,"Ella")
+    println(user1.name)
+
 }
 
 class Person (firstName: String = "DefaultFirstName", lastName: String = "DefaultLastName") {
@@ -47,5 +57,27 @@ class Person (firstName: String = "DefaultFirstName", lastName: String = "Defaul
         println("My hobby is $hobby")
     }
 
+
+}
+
+class Car() {
+    lateinit var owner: String
+
+    val myBrand: String = "BMW"
+        // custom getter to myBrand
+    get() {
+        return field.toLowerCase()
+    }
+
+    var myModel: String = "M5"
+    // only available within the same class
+        private set
+
+    init {
+        this.owner = "Frank"
+    }
+}
+
+data class User(val id: Long, val name: String) {
 
 }
