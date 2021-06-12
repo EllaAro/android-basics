@@ -45,7 +45,7 @@
         />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/tvSelectedDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Select date"
@@ -53,5 +53,24 @@
         android:textStyle="bold"
         android:textSize="20sp"
         />
+
+    <TextView
+        android:id="@+id/tvSelectedDateInMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:textSize="25sp"
+        android:textColor="@color/lightGreyTextColor"
+        android:text="Selected Date" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:textSize="25sp"
+        android:textColor="@color/lightGreyTextColor"
+        android:text="Age In Minutes" />
+
 
 </LinearLayout>
